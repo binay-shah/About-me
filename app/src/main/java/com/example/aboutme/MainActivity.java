@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void addNickName(View v){
+    public void addNickName(View v){
         EditText nickNameEdit = findViewById(R.id.nickname_edit);
         String nickNameText = nickNameEdit.getText().toString();
         TextView nickNameTextView = findViewById(R.id.nickname_text);
@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         nickNameTextView.setVisibility(View.VISIBLE);
 
         Context context = v.getContext();
-
         InputMethodManager imm = (InputMethodManager) context.getSystemService(Activity.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
     }
